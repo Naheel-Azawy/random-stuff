@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Computer Architecture Basics: What, Why, and How</title>
+<meta name="author" content="(Naheel)"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css"/>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/black.css" id="theme"/>
+
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'https://cdn.jsdelivr.net/npm/reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+<link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide" data-background="#000"><h2>Computer Architecture Basics: What, Why, and How</h2><h4>Naheel</h4><h4>2021-03-29</h4>
+</section>
+
+<section>
+<section id="slide-orgd0d209c" data-background="#000">
+<h2 id="orgd0d209c">Outline</h2>
+<ul>
+<li>What?</li>
+<li>Why?</li>
+<li>How?</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-orgb3b1b9f" data-background="#000">
+<h2 id="orgb3b1b9f">What is a computer?</h2>
+
+<div class="figure">
+<p><img src="./figs/t61.jpg" alt="t61.jpg" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org420ff02" data-background="#000">
+<h2 id="org420ff02">What is a computer?</h2>
+
+<div class="figure">
+<p><img src="./figs/itrash.jpg" alt="itrash.jpg" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-orgeb55c15" data-background="#000">
+<h2 id="orgeb55c15">What is a computer?</h2>
+
+<div class="figure">
+<p><img src="./figs/pi.jpg" alt="pi.jpg" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org0ae409f" data-background="#000">
+<h2 id="org0ae409f">What is a computer?</h2>
+
+<div class="figure">
+<p><img src="./figs/ard.png" alt="ard.png" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org0f86f60" data-background="#000">
+<h2 id="org0f86f60">What is a computer?</h2>
+
+<div class="figure">
+<p><img src="./figs/tiny85.jpeg" alt="tiny85.jpeg" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org003696b" data-background="#000">
+<h2 id="org003696b">What is a computer?</h2>
+
+<div class="figure">
+<p><img src="./figs/tiny10.jpg" alt="tiny10.jpg" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org24f6aea" data-background="#000">
+<h2 id="org24f6aea">What is a computer?</h2>
+
+<div class="figure">
+<p><img src="./figs/eniac.jpg" alt="eniac.jpg" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-orgb648c3f" data-background="#000">
+<h2 id="orgb648c3f">What is a computer?</h2>
+
+<div class="figure">
+<p><img src="./figs/mech.jpg" alt="mech.jpg" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org337aa3b" data-background="#000">
+<h2 id="org337aa3b">What is a computer?</h2>
+
+<div class="figure">
+<p><img src="./figs/q.jpg" alt="q.jpg" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-orge6ec69e" data-background="#000">
+<h2 id="orge6ec69e">Turing machine</h2>
+
+<div class="figure">
+<p><img src="./figs/turing.jpg" alt="turing.jpg" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org7cc1df3" data-background="#000">
+<h2 id="org7cc1df3">What architecture?</h2>
+
+<div class="figure">
+<p><img src="./figs/arm.jpg" alt="arm.jpg" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-orgbc72b47" data-background="#000">
+<h2 id="orgbc72b47">Logic gates</h2>
+
+<div class="figure">
+<p><img src="./figs/logic.png" alt="logic.png" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-orgf89db26" data-background="#000">
+<h2 id="orgf89db26">Celebrities</h2>
+<ul>
+<li>Intel</li>
+<li>ARM</li>
+<li>AVR</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-orga524aeb" data-background="#000">
+<h2 id="orga524aeb">But who cares?</h2>
+
+<div class="figure">
+<p><img src="./figs/intel.jpg" alt="intel.jpg" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org4d9c34a" data-background="#000">
+<h2 id="org4d9c34a">Security</h2>
+
+<div class="figure">
+<p><img src="./figs/spectre.jpg" alt="spectre.jpg" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org43e52e7" data-background="#000">
+<h2 id="org43e52e7">Reverse engineering</h2>
+
+<div class="figure">
+<p><img src="./figs/radare2.png" alt="radare2.png" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org4e8476c" data-background="#000">
+<h2 id="org4e8476c">Malware analysis</h2>
+
+<div class="figure">
+<p><img src="./figs/malware.png" alt="malware.png" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org7ee71b5" data-background="#000">
+<h2 id="org7ee71b5">More reasons</h2>
+<ul>
+<li>Performance</li>
+<li>Compilers</li>
+<li>Web assembly</li>
+<li>Tiny hardware</li>
+<li>Fun?</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org5267b14" data-background="#000">
+<h2 id="org5267b14">Let's build a computer</h2>
+
+<div class="figure">
+<p><img src="./figs/ben.jpg" alt="ben.jpg" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org74eedcf" data-background="#000">
+<h2 id="org74eedcf">Maybe Someday&#x2026;</h2>
+
+<div class="figure">
+<p><img src="./figs/emu.png" alt="emu.png" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org0bf5659" data-background="#000">
+<h2 id="org0bf5659">Simple arch book</h2>
+
+<div class="figure">
+<p><img src="./figs/mano-cover.jpg" alt="mano-cover.jpg" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org55cc142" data-background="#000">
+<h2 id="org55cc142">Instruction set</h2>
+
+<div class="figure">
+<p><img src="./figs/mano-inst-set.png" alt="mano-inst-set.png" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-orgb25da56" data-background="#000">
+<h2 id="orgb25da56">Program organization</h2>
+
+<div class="figure">
+<p><img src="./figs/mano-program-organization.png" alt="mano-program-organization.png" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org151a08d" data-background="#000">
+<h2 id="org151a08d">Instructions format</h2>
+
+<div class="figure">
+<p><img src="./figs/mano-inst-formats.png" alt="mano-inst-formats.png" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-orga5c305d" data-background="#000">
+<h2 id="orga5c305d">Indirect bit</h2>
+
+<div class="figure">
+<p><img src="./figs/mano-indirect.png" alt="mano-indirect.png" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-orgd0341cd" data-background="#000">
+<h2 id="orgd0341cd">Registers and memory</h2>
+<p>
+<img src="./figs/mano-registers.png" alt="mano-registers.png" />
+<img src="./figs/mano-registers-fig.png" alt="mano-registers-fig.png" />
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-orgfd4072a" data-background="#000">
+<h2 id="orgfd4072a">Full arch</h2>
+
+<div class="figure">
+<p><img src="./figs/mano-full.png" alt="mano-full.png" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-orgd5d1ce0" data-background="#000">
+<h2 id="orgd5d1ce0">Control unit</h2>
+
+<div class="figure">
+<p><img src="./figs/mano-control.png" alt="mano-control.png" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org1c50616" data-background="#000">
+<h2 id="org1c50616">Use it?</h2>
+</section>
+</section>
+<section>
+<section id="slide-org79bc8fd" data-background="#000">
+<h2 id="org79bc8fd">Add example</h2>
+<div class="org-src-container">
+
+<pre  class="src src-asm"><code trim><span style="color: #bc6ec5; font-weight: bold;">lda</span> <span style="color: #4f97d7; font-weight: bold;">A</span>
+<span style="color: #bc6ec5; font-weight: bold;">add</span> <span style="color: #4f97d7; font-weight: bold;">B</span>
+<span style="color: #bc6ec5; font-weight: bold;">sta</span> <span style="color: #4f97d7; font-weight: bold;">C</span>
+<span style="color: #bc6ec5; font-weight: bold;">hlt</span>
+
+<span style="color: #bc6ec5; font-weight: bold;">A</span>, dec 83
+<span style="color: #bc6ec5; font-weight: bold;">B</span>, dec 5
+<span style="color: #bc6ec5; font-weight: bold;">C</span>, dec 0
+</code></pre>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org58dbe59" data-background="#000">
+<h2 id="org58dbe59">Sub example</h2>
+<div class="org-src-container">
+
+<pre  class="src src-asm"><code trim><span style="color: #bc6ec5; font-weight: bold;">lda</span> <span style="color: #4f97d7; font-weight: bold;">B</span>
+<span style="color: #bc6ec5; font-weight: bold;">cma</span>
+<span style="color: #bc6ec5; font-weight: bold;">inc</span>
+<span style="color: #bc6ec5; font-weight: bold;">add</span> <span style="color: #4f97d7; font-weight: bold;">A</span>
+<span style="color: #bc6ec5; font-weight: bold;">sta</span> <span style="color: #4f97d7; font-weight: bold;">C</span>
+<span style="color: #bc6ec5; font-weight: bold;">hlt</span>
+
+<span style="color: #bc6ec5; font-weight: bold;">A</span>, dec 83
+<span style="color: #bc6ec5; font-weight: bold;">B</span>, dec 3
+<span style="color: #bc6ec5; font-weight: bold;">C</span>, dec 0
+</code></pre>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org6489a0d" data-background="#000">
+<h2 id="org6489a0d">Subroutine example</h2>
+<div class="org-src-container">
+
+<pre  class="src src-asm"><code trim><span style="color: #bc6ec5; font-weight: bold;">lda</span> <span style="color: #4f97d7; font-weight: bold;">X</span>
+<span style="color: #bc6ec5; font-weight: bold;">bsa</span> <span style="color: #4f97d7; font-weight: bold;">CIL4</span>
+<span style="color: #bc6ec5; font-weight: bold;">sta</span> <span style="color: #4f97d7; font-weight: bold;">X</span>
+
+<span style="color: #bc6ec5; font-weight: bold;">lda</span> <span style="color: #4f97d7; font-weight: bold;">Y</span>
+<span style="color: #bc6ec5; font-weight: bold;">bsa</span> <span style="color: #4f97d7; font-weight: bold;">CIL4</span>
+<span style="color: #bc6ec5; font-weight: bold;">sta</span> <span style="color: #4f97d7; font-weight: bold;">Y</span>
+
+<span style="color: #bc6ec5; font-weight: bold;">hlt</span>
+
+<span style="color: #bc6ec5; font-weight: bold;">X</span>, hex 0123
+<span style="color: #bc6ec5; font-weight: bold;">Y</span>, hex 0456
+
+<span style="color: #bc6ec5; font-weight: bold;">CIL4</span>, hex 0
+<span style="color: #bc6ec5; font-weight: bold;">cil</span>
+<span style="color: #bc6ec5; font-weight: bold;">cil</span>
+<span style="color: #bc6ec5; font-weight: bold;">cil</span>
+<span style="color: #bc6ec5; font-weight: bold;">cil</span>
+<span style="color: #bc6ec5; font-weight: bold;">bun</span> <span style="color: #4f97d7; font-weight: bold;">CIL4</span> I
+</code></pre>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org0f28b80" data-background="#000">
+<h2 id="org0f28b80">Mult example</h2>
+<div class="org-src-container">
+
+<pre  class="src src-asm"><code trim><span style="color: #bc6ec5; font-weight: bold;">LOOP</span>, lda A
+<span style="color: #bc6ec5; font-weight: bold;">sza</span>
+<span style="color: #bc6ec5; font-weight: bold;">bun</span> <span style="color: #4f97d7; font-weight: bold;">CONTINUE</span>
+
+<span style="color: #2aa1ae; background-color: #000000;">; </span><span style="color: #2aa1ae; background-color: #000000;">if AC == 0</span>
+<span style="color: #bc6ec5; font-weight: bold;">hlt</span>
+
+<span style="color: #2aa1ae; background-color: #000000;">; </span><span style="color: #2aa1ae; background-color: #000000;">if AC != 0</span>
+<span style="color: #bc6ec5; font-weight: bold;">CONTINUE</span>, add M1
+<span style="color: #bc6ec5; font-weight: bold;">sta</span> <span style="color: #4f97d7; font-weight: bold;">A</span>
+<span style="color: #bc6ec5; font-weight: bold;">lda</span> <span style="color: #4f97d7; font-weight: bold;">C</span>
+<span style="color: #bc6ec5; font-weight: bold;">add</span> <span style="color: #4f97d7; font-weight: bold;">B</span>
+<span style="color: #bc6ec5; font-weight: bold;">sta</span> <span style="color: #4f97d7; font-weight: bold;">C</span>
+<span style="color: #bc6ec5; font-weight: bold;">bun</span> <span style="color: #4f97d7; font-weight: bold;">LOOP</span>
+
+<span style="color: #bc6ec5; font-weight: bold;">M1</span>, dec -1
+<span style="color: #bc6ec5; font-weight: bold;">A</span>, dec 5
+<span style="color: #bc6ec5; font-weight: bold;">B</span>, dec 402
+<span style="color: #bc6ec5; font-weight: bold;">C</span>, dec 0
+</code></pre>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org28b7521" data-background="#000">
+<h2 id="org28b7521">Thank you</h2>
+<p>
+Any questions?
+</p>
+</section>
+</section>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+multiplex: {
+    secret: '', // null if client
+    id: '', // id, obtained from socket.io server
+    url: '' // Location of socket.io server
+},
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+});
+
+
+</script>
+</body>
+</html>

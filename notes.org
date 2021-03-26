@@ -1,0 +1,182 @@
+#+TITLE: Computer Architecture Basics: What, Why, and How
+#+AUTHOR: Naheel
+#+DATE: 2021-03-29
+
+#+OPTIONS: toc:nil num:nil
+#+OPTIONS: reveal_title_slide:"<h2>%t</h2><h4>%a</h4><h4>%d</h4>"
+#+REVEAL_THEME: black
+#+REVEAL_TITLE_SLIDE_BACKGROUND: #000
+#+REVEAL_DEFAULT_SLIDE_BACKGROUND: #000
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="style.css"/>
+
+* Outline
+  - What?
+  - Why?
+  - How?
+
+* What is a computer?
+  [[./figs/t61.jpg]]
+
+* What is a computer?
+  [[./figs/itrash.jpg]]
+
+* What is a computer?
+  [[./figs/pi.jpg]]
+
+* What is a computer?
+  [[./figs/ard.png]]
+
+* What is a computer?
+  [[./figs/tiny85.jpeg]]
+
+* What is a computer?
+  [[./figs/tiny10.jpg]]
+
+* What is a computer?
+  [[./figs/eniac.jpg]]
+
+* What is a computer?
+  [[./figs/mech.jpg]]
+
+* What is a computer?
+  [[./figs/q.jpg]]
+
+* Turing machine
+  [[./figs/turing.jpg]]
+
+* What architecture?
+  [[./figs/arm.jpg]]
+
+* Logic gates
+  [[./figs/logic.png]]
+
+* Celebrities
+  - Intel
+  - ARM
+  - AVR
+
+* But who cares?
+  [[./figs/intel.jpg]]
+
+* Security
+  [[./figs/spectre.jpg]]
+
+* Reverse engineering
+  [[./figs/radare2.png]]
+
+* Malware analysis
+  [[./figs/malware.png]]
+
+* More reasons
+  - Performance
+  - Compilers
+  - Web assembly
+  - Tiny hardware
+  - Fun?
+
+* Let's build a computer
+  [[./figs/ben.jpg]]
+
+* Maybe Someday...
+  [[./figs/emu.png]]
+
+* Simple arch book
+  [[./figs/mano-cover.jpg]]
+
+* Instruction set
+  [[./figs/mano-inst-set.png]]
+
+* Program organization
+  [[./figs/mano-program-organization.png]]
+
+* Instructions format
+  [[./figs/mano-inst-formats.png]]
+
+* Indirect bit
+  [[./figs/mano-indirect.png]]
+
+* Registers and memory
+  [[./figs/mano-registers.png]]
+  [[./figs/mano-registers-fig.png]]
+
+* Full arch
+  [[./figs/mano-full.png]]
+
+* Control unit
+  [[./figs/mano-control.png]]
+
+* Use it?
+* Add example
+  #+begin_src asm
+    lda A
+    add B
+    sta C
+    hlt
+
+    A, dec 83
+    B, dec 5
+    C, dec 0
+  #+end_src
+
+* Sub example
+  #+begin_src asm
+    lda B
+    cma
+    inc
+    add A
+    sta C
+    hlt
+
+    A, dec 83
+    B, dec 3
+    C, dec 0
+  #+end_src
+
+* Subroutine example
+   #+begin_src asm
+     lda X
+     bsa CIL4
+     sta X
+
+     lda Y
+     bsa CIL4
+     sta Y
+
+     hlt
+
+     X, hex 0123
+     Y, hex 0456
+
+     CIL4, hex 0
+     cil
+     cil
+     cil
+     cil
+     bun CIL4 I
+   #+end_src
+
+* Mult example
+  #+begin_src asm
+    LOOP, lda A
+    sza
+    bun CONTINUE
+
+    ; if AC == 0
+    hlt
+
+    ; if AC != 0
+    CONTINUE, add M1
+    sta A
+    lda C
+    add B
+    sta C
+    bun LOOP
+
+    M1, dec -1
+    A, dec 5
+    B, dec 402
+    C, dec 0
+  #+end_src
+
+* Thank you
+  Any questions?

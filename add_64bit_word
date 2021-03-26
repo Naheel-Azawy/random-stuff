@@ -1,0 +1,65 @@
+loop, lda A_PTR I
+add carry
+sta C_PTR I
+
+sze
+bun carry_one
+cla
+sta carry
+bun carry_end
+carry_one, lda one
+sta carry
+carry_end, nop
+
+lda C_PTR I
+add B_PTR I
+sta C_PTR I
+
+sze
+bun carry_one_1
+bun carry_end_1
+carry_one_1, lda one
+sta carry
+carry_end_1, nop
+
+lda A_PTR
+add one
+sta A_PTR
+lda B_PTR
+add one
+sta B_PTR
+lda C_PTR
+add one
+sta C_PTR
+
+lda counter
+add one
+sta counter
+
+sza
+bun loop
+
+hlt
+
+counter, -4
+one, 1
+carry, 0
+
+ORG 1024
+A_PTR, adr A
+B_PTR, adr B
+C_PTR, adr C
+Dec 0
+A, Dec 10
+Dec 0
+Dec 0
+Dec 0
+B, Dec 20
+Dec 0
+Dec 0
+Dec 0
+C, Dec 0
+Dec 0
+Dec 0
+Dec 0
+
