@@ -48,6 +48,7 @@
   [[./figs/arm.jpg]]
 
 * Logic gates
+  #+ATTR_HTML: :style width: 700px
   [[./figs/logic.png]]
 
 * Celebrities
@@ -84,6 +85,53 @@
 
 * Simple arch book
   [[./figs/mano-cover.jpg]]
+
+* How to program?
+  #+ATTR_HTML: :style width: 700px
+  [[./figs/radare2-msg.png]]
+
+* High-level code
+  #+begin_src c
+    void main() {
+      int A = 83;
+      int B = -23;
+      int C = 0;
+
+      C = A + B;
+    }
+  #+end_src
+
+* Too complex for the poor computer...
+
+* Instruction set
+  [[./figs/mano-inst-set.png]]
+
+* Real-life instruction sets
+  - [[https://en.wikipedia.org/wiki/X86_instruction_listings][x86]]
+  - [[http://ww1.microchip.com/downloads/en/DeviceDoc/DDI0029G_7TDMI_R3_trm.pdf][ARM]] (p. 32)
+
+* High-level code
+  #+begin_src c
+    void main() {
+      int A = 83;
+      int B = -23;
+      int C = 0;
+
+      C = A + B;
+    }
+  #+end_src
+
+* Assembly code
+  [[./figs/asm1.png]]
+
+* Symbolic code
+  [[./figs/asm2.png]]
+
+* Hexadecimal code
+  [[./figs/asm3.png]]
+
+* Binary code
+  [[./figs/asm4.png]]
 
 * Instruction set
   [[./figs/mano-inst-set.png]]
