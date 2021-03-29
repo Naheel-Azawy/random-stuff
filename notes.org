@@ -72,6 +72,8 @@
   - Compilers
   - Web assembly
   - Tiny hardware
+  - Understand
+  - ...
   - Fun?
 
 * Let's build a computer
